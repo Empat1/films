@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style/main.css">
+  <script defer src="./js/main.js"></script>
+  <title>CINEMA | Обзоры на фильмы</title>
+</head>
+<body>
+  <!-- Шапка сайта ==================== -->
+  <header class="container flex">
+    <div class="flex header_wrapper">
+      <a class="pointer" href="/index.html">Главная</a>
+      <h1 class="logo">CINEMA</h1>
+      <button onclick="showModal()" class="pointer">Войти</button>
+    </div>
+    <img src="./images/header_background.png" alt="Изображение заднего фона шапки">
+  </header>
+
+  <!-- Тело сайта ===================== -->
+  <main class="container">
+    <h2>Обзоры на фильмы</h2>
+    <!-- Секция с обзорами ============ -->
+    <section class="reviews">
+      <!-- Обзор ==================== -->
+      <div class="flex review">
+        <!-- Постер =================== -->
+        <img src="./images/posters/1.jpg" alt="Изображение постера фильма">
+        <div class="review_info">
+          <!-- Название =============== -->
+          <a class="pointer review_title" href="#">
+            <p>
+              Человек-паук: Нет пути домой
+            </p>
+          </a>
+          <!-- Дата публикации ======== -->
+          <span class="review_date">00.00.0000</span>
+          <!-- Кнопка (ссылка) на пост  -->
+          <a class="pointer" href="#">
+            <button class="pointer">
+              Читать
+            </button>
+          </a>
+        </div>
+      </div>
+      <!-- Обзор ==================== -->
+      <div class="flex review">
+        <!-- Постер =================== -->
+        <img src="./images/posters/2.jpg" alt="Изображение постера фильма">
+        <div class="review_info">
+          <!-- Название =============== -->
+          <a class="pointer review_title" href="#">
+            <p>
+              Дюна
+            </p>
+          </a>
+          <!-- Дата публикации ======== -->
+          <span class="review_date">00.00.0000</span>
+          <!-- Кнопка (ссылка) на пост  -->
+          <a class="pointer" href="#">
+            <button class="pointer">
+              Читать
+            </button>
+          </a>
+        </div>
+      </div>
+      <!-- Обзор ==================== -->
+      <div class="flex review">
+        <!-- Постер =================== -->
+        <img src="./images/posters/3.jpg" alt="Изображение постера фильма">
+        <div class="review_info">
+          <!-- Название =============== -->
+          <a class="pointer review_title" href="#">
+            <p>
+              Армия воров
+            </p>
+          </a>
+          <!-- Дата публикации ======== -->
+          <span class="review_date">00.00.0000</span>
+          <!-- Кнопка (ссылка) на пост  -->
+          <a class="pointer" href="#">
+            <button class="pointer">
+              Читать
+            </button>
+          </a>
+        </div>
+      </div>
+      <!-- Обзор ==================== -->
+      <div class="flex review">
+        <!-- Постер =================== -->
+        <img src="./images/posters/4.jpg" alt="Изображение постера фильма">
+        <div class="review_info">
+          <!-- Название =============== -->
+          <a class="pointer review_title" href="#">
+            <p>
+              Кошачьи миры Луиса Уэйна
+            </p>
+          </a>
+          <!-- Дата публикации ======== -->
+          <span class="review_date">00.00.0000</span>
+          <!-- Кнопка (ссылка) на пост  -->
+          <a class="pointer" href="#">
+            <button class="pointer">
+              Читать
+            </button>
+          </a>
+        </div>
+      </div>
+      <!-- Обзор ==================== -->
+      <div class="flex review">
+        <!-- Постер =================== -->
+        <img src="./images/posters/5.jpg" alt="Изображение постера фильма">
+        <div class="review_info">
+          <!-- Название =============== -->
+          <a class="pointer review_title" href="#">
+            <p>
+              Черная Вдова
+            </p>
+          </a>
+          <!-- Дата публикации ======== -->
+          <span class="review_date">00.00.0000</span>
+          <!-- Кнопка (ссылка) на пост  -->
+          <a class="pointer" href="#">
+            <button class="pointer">
+              Читать
+            </button>
+          </a>
+        </div>
+      </div>
+      <!-- Обзор ==================== -->
+      <div class="flex review">
+        <!-- Постер =================== -->
+        <img src="./images/posters/6.jpg" alt="Изображение постера фильма">
+        <div class="review_info">
+          <!-- Название =============== -->
+          <a class="pointer review_title" href="#">
+            <p>
+              Клинок, рассекающий демонов: Бесконечный поезд
+            </p>
+          </a>
+          <!-- Дата публикации ======== -->
+          <span class="review_date">00.00.0000</span>
+          <!-- Кнопка (ссылка) на пост  -->
+          <a class="pointer" href="#">
+            <button class="pointer">
+              Читать
+            </button>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Подвал сайта =================== -->
+  <footer class="container flex">
+    <!-- Информация о разработчике ==== -->
+    <div class="flex footer_item">
+      <span class="name">Разработка:</span>
+      <span class="value">Черемисин Е.</span>
+    </div>
+    <!-- Контактный EMAIL ============= -->
+    <div class="flex footer_item">
+      <span class="name">email:</span>
+      <a href="mailto:empat1@mail.ru" class="pointer value">empat1@mail.ru</a>
+    </div>
+  </footer>
+
+  <!-- Модальное окно ================= -->
+  <div class="modal">
+    <!-- Блок АВТОРИЗАЦИИ ============= -->
+    <div id="auth" class="modal_window" onsubmit="return login()">
+      <h3>Авторизация</h3>
+      <!-- Форма ====================== -->
+      <form class="flex">
+        <!-- Логин ====================== -->
+        <div class="flex field">
+          <label for="auth_login">Логин</label>
+          <input required autocomplete placeholder="Введите логин"  id="auth_login" type="text">
+        </div>
+        <!-- Пароль ====================== -->
+        <div class="flex field">
+          <label for="auth_password">Пароль</label>
+          <input required autocomplete placeholder="Введите пароль" type="password" id="auth_password">
+        </div>
+        <button class="pointer" type="submit">Войти</button>
+      </form>
+      <button onclick="switchToReg()" class="pointer additional">Регистрация</button>
+    </div>
+
+    <!-- Блок РЕГИСТРАЦИИ =============== -->
+    <div id="reg" class="modal_window" onsubmit="register()">
+      <h3>Регистрация</h3>
+      <!-- Форма ======================== -->
+      <form class="flex">
+        <!-- Имя ======================== -->
+        <div class="flex field">
+          <label for="name">Имя</label>
+          <input required autocomplete placeholder="Евгений" value="Евгений" pattern="[а-яА-я0-9- ]+" id="name" type="text">
+        </div>
+        <!-- Email ====================== -->
+        <div class="flex field">
+          <label for="email">Email</label>
+          <input required autocomplete placeholder="пример-почты@mail.ru" value="q@mail.ru" id="email" type="email">
+        </div>
+        <!-- Телефон ==================== -->
+        <div class="flex field">
+          <label for="phone">Телефон</label>
+          <input required autocomplete placeholder="8 (000) 000 00 00" pattern="8\s[(][0-9]{3}[)]\s[0-9]{3}\s[0-9]{2}\s[0-9]{2}" value="8 (000) 000 00 00" id="phone" type="tel">
+        </div>
+        <!-- Пароль ===================== -->
+        <div class="flex field">
+          <label for="password">Пароль</label>
+          <input required autocomplete minlength="6" pattern="^\d+$" placeholder="Введите пароль" type="password" id="password">
+        </div>
+        <!-- Повтор пароля ============== -->
+        <div class="flex field">
+          <label for="conf_password">Повторите пароль</label>
+          <input required autocomplete placeholder="Повторите пароль" type="password" id="conf_password">
+        </div>
+        <!-- Согласие на обработку ... = -->
+        <div class="flex checkbox">
+          <input required type="checkbox" id="consent">
+          <label for="consent">Даю согласие на обработку персональных данных</label>
+        </div>
+        <button class="pointer" type="submit">Зарегистрироваться</button>
+      </form>
+      <button onclick="switchToAuth()" class="pointer additional">Уже есть аккаунт</button>
+    </div>
+
+    <!-- Крестик ЗАКРЫТЬ =============== -->
+    <img onclick="closeModal()" class="pointer" src="./images/close.png" alt="">
+  </div>
+</body>
+</html>
